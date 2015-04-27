@@ -211,12 +211,12 @@ public class RecordSetBulkMutator  extends Configured implements Tool{
         		valOut.set(record);
         		context.write(NullWritable.get(), valOut);
         		if (count == 1) {
-        			context.getCounter("Mutation type", "Insert").increment(1);
+        			// context.getCounter("Mutation type", "Insert").increment(1);
         		} else {
-        			context.getCounter("Mutation type", "Update").increment(1);
+        			// context.getCounter("Mutation type", "Update").increment(1);
         		}
         	} else {
-    			context.getCounter("Mutation type", "Delete").increment(1);
+    			// context.getCounter("Mutation type", "Delete").increment(1);
         	}
         }
     }
